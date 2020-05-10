@@ -1,7 +1,13 @@
-#card-body {
-  background-color: lightgray;
+#mainTitle {
+  text-decoration: none;
+  color: white;
+  
+  
 }
-
-#card-title {
-  font: outline;
+#nav1{
+background-color: #74546a;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 30px;
 }
