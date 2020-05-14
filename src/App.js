@@ -6,6 +6,9 @@ import Footer from "./Footer/Footer";
 import "./App.css";
 import Home from "./Home";
 import Dashboard from "./Dashboard";
+import DataExtraction from "./DataExtraction";
+import Item from "./Item";
+import AddNewItem from "./AddNewItem";
 
 export default class App extends Component {
   constructor() {
@@ -13,13 +16,12 @@ export default class App extends Component {
 
     this.state = {
       loggedInStatus: "NOT_LOGGED_IN",
-      user: {}
+      user: {},
     };
 
     this.handleLogin = this.handleLogin.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
     //this.handleDelete = this.handleDelete.bind(this);
- 
   }
 
   checkLoginStatus() {
@@ -47,9 +49,9 @@ export default class App extends Component {
     //   .catch(error => {
     //     console.log("check login error", error);
     //   });
-       this.setState({
-            loggedInStatus: "NOT_LOGGED_IN",
-           });
+    this.setState({
+      loggedInStatus: "NOT_LOGGED_IN",
+    });
   }
 
   componentDidMount() {
@@ -59,33 +61,33 @@ export default class App extends Component {
   handleLogout() {
     this.setState({
       loggedInStatus: "NOT_LOGGED_IN",
-      user: {}
+      user: {},
     });
   }
 
   handleLogin(data) {
     this.setState({
       loggedInStatus: "LOGGED_IN",
-      user: data
+      user: data,
     });
     console.log(this.state.user);
   }
-//   handleDelete(item, event) {
-//     axios.delete(`https://k7re4kzp33.execute-api.eu-west-1.amazonaws.com/dev/foodometer/delete/${item}`)
-//     .then(response=>{
-//         console.log(response);
-//         alert('item deleted');
-//         //const filtered_Product_List = itemList.filter(product =>{
-//           //    return product.item_id !== item;
-              
-//        // });
-//         //setItemList(filtered_Product_List);
-//     })
-//     .catch(err =>{
-//         console.log("Error deleting the product",err);
-//     })
-//     event.preventDefault();
-// }
+  //   handleDelete(item, event) {
+  //     axios.delete(`https://k7re4kzp33.execute-api.eu-west-1.amazonaws.com/dev/foodometer/delete/${item}`)
+  //     .then(response=>{
+  //         console.log(response);
+  //         alert('item deleted');
+  //         //const filtered_Product_List = itemList.filter(product =>{
+  //           //    return product.item_id !== item;
+
+  //        // });
+  //         //setItemList(filtered_Product_List);
+  //     })
+  //     .catch(err =>{
+  //         console.log("Error deleting the product",err);
+  //     })
+  //     event.preventDefault();
+  // }
 
   render() {
     return (
@@ -96,7 +98,7 @@ export default class App extends Component {
             <Route
               exact
               path={"/"}
-              render={props => (
+              render={(props) => (
                 <Home
                   {...props}
                   handleLogin={this.handleLogin}
@@ -108,18 +110,18 @@ export default class App extends Component {
             <Route
               exact
               path={"/dashboard"}
-              render={props => (
+              render={(props) => (
                 <Dashboard
                   {...props}
                   loggedInStatus={this.state.loggedInStatus}
-                  user = {this.state.user}
+                  user={this.state.user}
                   handleDel={this.handleDelete}
                 />
               )}
             />
           </Switch>
         </BrowserRouter>
-        <Footer/>
+        <Footer />
       </div>
     );
   }
