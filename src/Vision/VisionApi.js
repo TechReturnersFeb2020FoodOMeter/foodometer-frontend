@@ -53,14 +53,9 @@ class VisionApi extends React.Component {
       );
       let responseJson = await response.json();
       console.log(responseJson);
-      this.state.key = responseJson.responses[0].textAnnotations[0].description.split(
-        "\n"
-      );
-      console.log(this.state.key);
-      this.setState({
-        googleResponse: responseJson,
-        uploading: false,
-      });
+      let processed = responseJson.responses[0].textAnnotations[0].description.split('\n');
+      console.log(processed);
+      this.setState({ key: processed} )
     } catch (error) {
       console.log(error);
     }
@@ -86,12 +81,19 @@ class VisionApi extends React.Component {
               // eslint-disable-next-line react/jsx-no-comment-textnodes
             }
             <img src="" />
-            <DataExtraction />
+            {/* <DataExtraction /> */}
             {/* <DataExtraction 
             arr={this.state.key} 
             handleAdd={this.props.handleAdd}/> */}
           </div>
+          <div className="text-center">
           {console.log("key is" + this.state.key)}
+            <DataExtraction 
+            arr={this.state.key} 
+            handleAdd={this.props.handleAdd}/>
+          </div>
+          
+
         </div>
       </div>
     );

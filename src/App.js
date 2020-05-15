@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import axios from "axios";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import "./App.css";
 import Home from "./Home";
 import Dashboard from "./Dashboard";
-import DataExtraction from "./DataExtraction";
-import Item from "./Item";
-import AddNewItem from "./AddNewItem";
+
+
 
 export default class App extends Component {
   constructor() {
