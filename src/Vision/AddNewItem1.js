@@ -60,4 +60,4 @@ function AddNewItem(props) {
   );
 }
 
-export default AddNewItem;
+export default AddNewItem1;
