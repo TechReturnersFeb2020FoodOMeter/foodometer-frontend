@@ -1,13 +1,21 @@
 .mylist{
-    width: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
-}
-.form1{
-    margin: 0 auto;
+    width:60%;
+    margin: 20px;
+    background-color: rgb(233, 241, 244);
+    font-family: 'lato';
+    
 }
 input{
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    margin-left: 10px;
+    padding: 5px 0px 5px 5px;
+    font-size: 15px;
     
+}
+label{
+    font-size: 15px;
+    width:100px;
+    display: inline-block;
 }

@@ -47,35 +47,33 @@ export default class Registration extends Component {
 
     render() {
         return (
-            <div className="mylist">
-                <form className="shadow my-3" onSubmit={this.handleSubmit}>
+            <div className="mylist shadow">
+                <form className="py-4" onSubmit={this.handleSubmit}>
                     <div className="form-row justify-content-center">
-                        <div className="form-group col-md-6">
-                            <label>Email</label>
+                        <div className="form-group mx-1">
                             <input
                                 type="email"
                                 name="email"
-                                placeholder="email"
+                                placeholder="Email"
                                 value={this.state.email}
                                 onChange={this.handleChange}
                                 required
                             />
                         </div></div>
                     <div className="form-row justify-content-center">
-                        <div className="form-group col-md-6">
-                            <label for="inputEmail4">Username</label>
+                        <div className="form-group">
                             <input
                                 type="username"
                                 name="username"
-                                placeholder="username"
+                                placeholder="Username"
                                 value={this.state.username}
                                 onChange={this.handleChange}
                                 required
                             />
                         </div></div>
                     <div className="form-row justify-content-center">
-                        <div className="form-group col-md-6">
-                            <label for="inputPassword4">Password</label>
+                        <div className="form-group ">
+                            
                             <input
                                 type="password"
                                 name="password"
@@ -86,19 +84,19 @@ export default class Registration extends Component {
                             />
                         </div></div>
                     <div className="form-row justify-content-center">
-                        <div className="form-group col-md-6">
-                            <label for="inputPassword4">Confirm Password</label>
+                        <div className="form-group">
+                           
                             <input
                                 type="password"
                                 name="password_confirmation"
-                                placeholder="Password confirmation"
+                                placeholder="Confirm Password"
                                 value={this.state.password_confirmation}
                                 onChange={this.handleChange}
                                 required
                             />
                         </div></div>
                     <div className="form-row justify-content-center">
-                        <button type="submit" className="btn btn-primary my-4">Register</button>
+                        <button type="submit" className="btn btn-info my-2 mb-4">Register</button>
                     </div>
                 </form>
             </div>

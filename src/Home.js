@@ -3,6 +3,7 @@ import axios from "axios";
 import "./App.css";
 import Registration from "./Auth/Registration";
 import Login from "./Auth/Login";
+import "./Home.css";
 
 export default class Home extends Component {
   constructor(props) {
@@ -50,25 +51,30 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div>
-        {/* <h4>Home</h4>
-        <h6>Status: {this.props.loggedInStatus}</h6> */}
-        <button  onClick={() => this.handleLogoutClick()}  className="btn btn-primary logout mx-3">Logout</button>
-        <div className="row">
-            <div className="col-12 col-md-6 py-4">
+     
+   
+        
+        <div className="row" id="Login">
+        <div className="col-12 col-md-6 py-4" ></div>
+            <div className="col-12 col-md-6 py-4" >
             
             <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />
-            
-            </div>
-            
-            <div className="col-12 col-md-6">
-            
-            <h5 className="home_Reg">Don't have an account! Register One!</h5>          
-          <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} handleSuccessfulRegister={this.handleSuccessfulRegister}/>
+            <div id ="register">
+            <h6 className="home_Reg">Don't have an account?&nbsp;</h6><h6> 
+            <a class="u" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Register
+  </a></h6> 
+  </div>
+  <div class="collapse" id="collapseExample">
+  
+  <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} handleSuccessfulRegister={this.handleSuccessfulRegister}/>
+
+</div>      
+          
           
             </div>
         </div> 
-      </div>
+   /* <button  onClick={() => this.handleLogoutClick()}  className="btn btn-primary logout mx-3">Logout</button> */
     );
   }
 }

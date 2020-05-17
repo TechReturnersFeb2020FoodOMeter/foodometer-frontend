@@ -48,14 +48,16 @@ export default class Login extends Component {
   render() {
     return (
 <div className="login">
+  
 <form className="shadow" onSubmit={this.handleSubmit}>
-    <div className="form-row justify-content-center my-4">
-        <div className="form-group mx-2">
-            <label htmlFor="username">Username</label>
+<h4 className="pt-2 py-2">Login</h4>
+    <div className="form-row justify-content-center">
+        <div className="form-group mx-1">
+            
             <input
             type="username"
             name="username"
-            placeholder="username"
+            placeholder="Username"
             value={this.state.username}
             onChange={this.handleChange}
             required
@@ -63,8 +65,8 @@ export default class Login extends Component {
         </div>
         </div>
         <div className="form-row justify-content-center">
-        <div className="form-group mx-2">
-            <label htmlFor="pwd">Password:</label>
+        <div className="form-group mx-1">
+           
             <input
             type="password"
             name="password"
@@ -76,8 +78,8 @@ export default class Login extends Component {
         </div>
     </div>
     <div className="form-row justify-content-center">
-    <div className="mx-2">
-    <button type="submit" className="btn btn-primary my-4">Login</button>
+    <div className="mx-1">
+    <button type="submit" className="btn btn-info my-2 mb-4">Login</button>
     </div></div>
 </form>
 </div>

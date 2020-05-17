@@ -7,7 +7,12 @@ import Home from "./Home";
 import Dashboard from "./Dashboard";
 
 
-
+const divStyle = {
+    width: '100%',
+    height:"800px",
+    backgroundImage: `url(${"./brooke-lark-08bOYnH_r_E-unsplash.jpg"})`,
+    backgroundSize:'cover'
+}
 export default class App extends Component {
   constructor() {
     super();
@@ -23,30 +28,6 @@ export default class App extends Component {
   }
 
   checkLoginStatus() {
-    // axios
-    //   .get("http://localhost:3001/logged_in", { withCredentials: true })
-    //   .then(response => {
-    //     if (
-    //       response.data.logged_in &&
-    //       this.state.loggedInStatus === "NOT_LOGGED_IN"
-    //     ) {
-    //       this.setState({
-    //         loggedInStatus: "LOGGED_IN",
-    //         user: response.data.user
-    //       });
-    //     } else if (
-    //       !response.data.logged_in &
-    //       (this.state.loggedInStatus === "LOGGED_IN")
-    //     ) {
-    //       this.setState({
-    //         loggedInStatus: "NOT_LOGGED_IN",
-    //         user: {}
-    //       });
-    //     }
-    //   })
-    //   .catch(error => {
-    //     console.log("check login error", error);
-    //   });
     this.setState({
       loggedInStatus: "NOT_LOGGED_IN",
     });
@@ -70,27 +51,15 @@ export default class App extends Component {
     });
     console.log(this.state.user);
   }
-  //   handleDelete(item, event) {
-  //     axios.delete(`https://k7re4kzp33.execute-api.eu-west-1.amazonaws.com/dev/foodometer/delete/${item}`)
-  //     .then(response=>{
-  //         console.log(response);
-  //         alert('item deleted');
-  //         //const filtered_Product_List = itemList.filter(product =>{
-  //           //    return product.item_id !== item;
-
-  //        // });
-  //         //setItemList(filtered_Product_List);
-  //     })
-  //     .catch(err =>{
-  //         console.log("Error deleting the product",err);
-  //     })
-  //     event.preventDefault();
-  // }
-
+  
   render() {
     return (
-      <div className="app">
-        <Header />
+      <div className="app" style={divStyle}>
+        
+        {/* /* <Header /> */ }
+        {/* <img src={require("./brooke-lark-08bOYnH_r_E-unsplash.jpg")} alt="Fruits" /> */}
+          <div id="main" className="py-4">
+          <h2>FOOD-O-METER</h2>
         <BrowserRouter>
           <Switch>
             <Route
@@ -119,7 +88,9 @@ export default class App extends Component {
             />
           </Switch>
         </BrowserRouter>
-        <Footer />
+        </div>
+       
+        {/* <Footer /> */}
       </div>
     );
   }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import VisionApi from "./Vision/VisionApi";
+import "./Dashboard.css"
 
 const Dashboard = (props) => {
   const [itemList, setItemList] = useState([]);
@@ -60,7 +61,7 @@ const Dashboard = (props) => {
   };
 
   return (
-    <div>
+    <div id="dashboard">
       <div>
         {/* <h1>Dashboard</h1>
         <h1>Status: {props.loggedInStatus}</h1>

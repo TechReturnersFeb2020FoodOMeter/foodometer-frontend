@@ -1,0 +1,19 @@
+.row{
+   width: 100%;
+   align-items: center;
+   padding-top: 5%;
+}
+#register{
+   display: flex;
+   align-items: center;
+   padding-left: 110px;
+   font-family: 'lato';
+}
+a{
+    text-decoration: underline;
+    font-weight: bold;
+    font-family: 'lato';
+}
+a:hover{
+    color: #17a2b8;
+}

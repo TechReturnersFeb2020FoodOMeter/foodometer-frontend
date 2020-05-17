@@ -1,6 +1,8 @@
 .app {
   text-align: center;
-  color: rgb(75, 184, 218);
+  color: #3a3a3a;
+  font-family: 'lato';
+  
 }
 .home_Reg{
   text-align: center;
@@ -8,4 +10,18 @@
 .logout{
   float: right;
  
+}
+#main{
+  background-image: url("./brooke-lark-08bOYnH_r_E-unsplash.jpg");
+  margin: 0;
+  height: 120%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+h2{
+  letter-spacing: 0.4rem;
+  font-family: 'lato';
+  font-size: xx-large;
 }
