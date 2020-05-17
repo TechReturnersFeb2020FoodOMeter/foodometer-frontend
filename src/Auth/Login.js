@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./Login.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser, faKey } from '@fortawesome/free-solid-svg-icons'
 
 export default class Login extends Component {
   constructor(props) {
@@ -53,7 +55,7 @@ export default class Login extends Component {
 <h4 className="pt-2 py-2">Login</h4>
     <div className="form-row justify-content-center">
         <div className="form-group mx-1">
-            
+        <span class="input-group-addon"><FontAwesomeIcon icon = {faUser}/></span>
             <input
             type="username"
             name="username"
@@ -62,11 +64,12 @@ export default class Login extends Component {
             onChange={this.handleChange}
             required
           />
+          
         </div>
         </div>
         <div className="form-row justify-content-center">
         <div className="form-group mx-1">
-           
+        <span class="input-group-addon"><FontAwesomeIcon icon = {faKey} /></span>
             <input
             type="password"
             name="password"

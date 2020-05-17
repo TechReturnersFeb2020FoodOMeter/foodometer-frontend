@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./Registration.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faUser, faKey, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 
 export default class Registration extends Component {
     constructor(props) {
@@ -51,6 +53,7 @@ export default class Registration extends Component {
                 <form className="py-4" onSubmit={this.handleSubmit}>
                     <div className="form-row justify-content-center">
                         <div className="form-group mx-1">
+                        <span class="input-group-addon"><FontAwesomeIcon icon = {faEnvelope}/></span>
                             <input
                                 type="email"
                                 name="email"
@@ -62,6 +65,7 @@ export default class Registration extends Component {
                         </div></div>
                     <div className="form-row justify-content-center">
                         <div className="form-group">
+                        <span class="input-group-addon"><FontAwesomeIcon icon = {faUser}/></span>
                             <input
                                 type="username"
                                 name="username"
@@ -73,7 +77,7 @@ export default class Registration extends Component {
                         </div></div>
                     <div className="form-row justify-content-center">
                         <div className="form-group ">
-                            
+                        <span class="input-group-addon"><FontAwesomeIcon icon = {faKey}/></span>
                             <input
                                 type="password"
                                 name="password"
@@ -85,7 +89,7 @@ export default class Registration extends Component {
                         </div></div>
                     <div className="form-row justify-content-center">
                         <div className="form-group">
-                           
+                        <span class="input-group-addon"><FontAwesomeIcon icon = {faCheckCircle}/></span>
                             <input
                                 type="password"
                                 name="password_confirmation"
