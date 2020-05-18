@@ -26,11 +26,12 @@ class DynamicSelect extends Component{
             );
 
             return (
-            <select name="customSearch" className="custom-search-select" onChange={this.handleChange}>
+                <div> {arrayOfData.length} matches found for the image
+            <select name="customSearch" className="custom-search-select m-4" onChange={this.handleChange}>
                 <option>Select Item</option>
                 {options}
                 <option>None of the above</option>
-           </select>
+           </select></div>
         )
     }
 }

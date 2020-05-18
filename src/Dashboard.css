@@ -1,3 +1,96 @@
 #dashboard{
-    background-color: white;
+    background-color:white;
+    
 }
+h3{
+    letter-spacing: 0.1rem;
+    font-family: 'lato';
+    margin: 0px;
+  }
+  .subheader{
+      padding-top: 2%;
+  }
+  h6{
+      display: flex;
+      align-items: flex-start;
+      margin-left: 60px;
+      
+      font-family: 'lato';
+  }
+  .sort{
+    display: flex;
+    align-items: flex-end;
+    margin-right: 60px;
+
+  }
+ 
+  .card-header{
+      background-color: rgb(233, 241, 244);
+  }
+  .card{
+      border-radius: 5px;
+  }
+ .calendar{
+     font-family: 'lato';
+     font-weight: lighter;
+     font-size: 14px;
+     padding-left: 8px;
+ }
+ .clock{
+    font-family: 'lato';
+    font-weight: lighter;
+    font-size: 14px;
+    padding-left: 25px;
+}
+#title{
+    letter-spacing: 0.1rem;
+    font-family: 'lato';
+    margin: 3px;
+    font-size: 20px;
+    text-transform: capitalize;
+  }
+  button {
+      text-decoration: none;
+      border-style: none;
+      
+  }
+  #filler {
+      height: 286px;
+      background-color: rgb(233, 241, 244);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  @media (min-width: 576px){
+  .modal-dialog {
+      max-width: 60%;
+      margin: 10rem auto;
+  }}
+  .card-img-top{
+      max-height: 196.75px;
+  }
+  .close {
+    display: inline-block;
+    padding: 14px 24px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap
+  }
+
+  .topright {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .addButton{
+    text-decoration: none;
+    border: 0px;
+    
+  }
+    
+  

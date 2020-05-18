@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Header from "./Header/Header";
-import Footer from "./Footer/Footer";
 import "./App.css";
 import Home from "./Home";
 import Dashboard from "./Dashboard";
-
 
 const divStyle = {
     width: '100%',
@@ -58,8 +55,8 @@ export default class App extends Component {
         
         {/* /* <Header /> */ }
         {/* <img src={require("./brooke-lark-08bOYnH_r_E-unsplash.jpg")} alt="Fruits" /> */}
-          <div id="main" className="py-4">
-          <h2>FOOD-O-METER</h2>
+          <div id="main" className="">
+          
         <BrowserRouter>
           <Switch>
             <Route

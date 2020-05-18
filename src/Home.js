@@ -51,16 +51,17 @@ export default class Home extends Component {
 
   render() {
     return (
-     
-   
-        
-        <div className="row" id="Login">
+      
+        <div id="Login">
+          <div>
+      <h2 className="py-4">FOOD-O-METER</h2></div>
+      <div className="row">
         <div className="col-12 col-md-6 py-4" ></div>
             <div className="col-12 col-md-6 py-4" >
             
             <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />
             <div id ="register">
-            <h6 className="home_Reg">Don't have an account?&nbsp;</h6><h6> 
+            <h6 className="home_Reg" id="reg-link">Don't have an account?&nbsp; 
             <a class="u" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     Register
   </a></h6> 
@@ -71,9 +72,10 @@ export default class Home extends Component {
 
 </div>      
           
-          
+</div>   
             </div>
         </div> 
+        
    /* <button  onClick={() => this.handleLogoutClick()}  className="btn btn-primary logout mx-3">Logout</button> */
     );
   }

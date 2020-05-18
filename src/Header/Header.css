@@ -1,8 +1,10 @@
 #mainTitle {
   text-decoration: none;
-  color: white;
-  
-  
+  height: 80px;
+  letter-spacing: 0.4rem;
+  font-family: 'lato';
+  font-size: xx-large;
+  padding-left: 240px;
 }
 #nav1{
 
@@ -10,4 +12,22 @@ display: flex;
 align-items: center;
 justify-content: center;
 margin-bottom: 30px;
+background-color:  rgb(233, 241, 244);
+}
+#rowhead {
+  width: 100%;
+    align-items: center;
+    padding-top: 5px;
+}
+#drop {
+  background-color: rgb(233, 241, 244);
+  border: 0px;
+  float: right
+}
+.nav-link {
+  display: block;
+  padding: 0rem 1rem;
+}
+a{
+  text-transform: capitalize;
 }

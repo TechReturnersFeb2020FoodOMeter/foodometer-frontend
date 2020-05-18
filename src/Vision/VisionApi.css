@@ -4,5 +4,9 @@
    justify-content: center;
 }
 form{
-    width:600px;
+    width:800px;
+}
+.addprod{
+    margin: 10px;
+    padding-top: 20px;
 }

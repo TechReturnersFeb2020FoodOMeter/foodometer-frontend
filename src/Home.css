@@ -2,6 +2,7 @@
    width: 100%;
    align-items: center;
    padding-top: 5%;
+  
 }
 #register{
    display: flex;
@@ -17,3 +18,24 @@ a{
 a:hover{
     color: #17a2b8;
 }
+#Login{
+    background-image: url("./brooke-lark-08bOYnH_r_E-unsplash.jpg");
+    margin: 0;
+    height: 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+  }
+  div#Login{
+      height:900px;
+  }
+  h2{
+    letter-spacing: 0.4rem;
+    font-family: 'lato';
+    font-size: xx-large;
+    margin: 0px;
+  }
+  #reg-link {
+      margin-left: 0px;
+  }

@@ -3,6 +3,8 @@ import React from "react";
 import "./VisionApi.css";
 import FileBase64 from "react-file-base64";
 import DataExtraction from "./DataExtraction";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 
 class VisionApi extends React.Component {
   constructor(props) {
@@ -10,6 +12,7 @@ class VisionApi extends React.Component {
     this.state = {
       files: [],
       key: [],
+      fileuploaded:"",
     };
 
     this.submitToGoogle = this.submitToGoogle.bind(this);
@@ -55,7 +58,7 @@ class VisionApi extends React.Component {
       console.log(responseJson);
       let processed = responseJson.responses[0].textAnnotations[0].description.split('\n');
       console.log(processed);
-      this.setState({ key: processed} )
+      this.setState({ key: processed,fileuploaded:'true'} )
     } catch (error) {
       console.log(error);
     }
@@ -63,19 +66,17 @@ class VisionApi extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <h1 className="text-center">Vision API </h1>
-          <div className="text-center mt-25">
-            <p className="text-center">Upload Some Image~</p>
-            <FileBase64 multiple={true} onDone={this.getFiles.bind(this)} />
-          </div>
+      
+          <div className="text-center my-4 pl-4">
+            <div className="justify-contents-center">Upload Image
+            <FileBase64 multiple={true} onDone={this.getFiles.bind(this)} /></div>
+          
           <div className="text-center">
             {
               this.state.files.map((file, i) => {
                 // eslint-disable-next-line jsx-a11y/alt-text
                 return (
-                  <img key={i} src={file.base64} width="100px" height="100px" />
+                  <img key={i} src={file.base64} width="150px" height="150px" className="my-2" style={{ border: "1px solid #3a3a3a"}} />
                 );
               })
               // eslint-disable-next-line react/jsx-no-comment-textnodes
@@ -90,12 +91,11 @@ class VisionApi extends React.Component {
           {console.log("key is" + this.state.key)}
             <DataExtraction 
             arr={this.state.key} 
+            file={this.state.fileuploaded}
             handleAdd={this.props.handleAdd}/>
           </div>
           
-
-        </div>
-      </div>
+          </div>
     );
   }
 }
