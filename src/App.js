@@ -53,8 +53,7 @@ export default class App extends Component {
     return (
       <div className="app" style={divStyle}>
         
-        {/* /* <Header /> */ }
-        {/* <img src={require("./brooke-lark-08bOYnH_r_E-unsplash.jpg")} alt="Fruits" /> */}
+       
           <div id="main" className="">
           
         <BrowserRouter>

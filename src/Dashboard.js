@@ -130,9 +130,7 @@ const Dashboard = (props) => {
         </div>
         </div>
         </div>
-        {/* <h1>Dashboard</h1>
-        <h1>Status: {props.loggedInStatus}</h1>
-        <h5>User id: {props.user.user_id}</h5> */}
+       
 
         {/* <VisionApi handleAdd={handleAdd} /> */}
 
