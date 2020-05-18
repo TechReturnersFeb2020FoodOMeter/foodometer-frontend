@@ -6,6 +6,7 @@ const DataExtraction = (props) => {
   const [product, setProduct] = useState("");
   const [date, setDate] = useState("2020-05-23");
   const [reminder, setReminder] = useState("");
+  const [category, setCategory] = useState("Category");
   const foodlist = [
     "acorn squash",
     "alfalfa sprouts",
@@ -605,9 +606,12 @@ const DataExtraction = (props) => {
   const handleReminderChange = (event) => {
     setReminder(event.target.value);
   };
+  const handleCategoryChange = (event) => {
+    setCategory(event.target.value);
+  };
 
   const handleAddTask = () => {
-    props.handleAdd(product, date, reminder);
+    props.handleAdd(product, date, reminder,category);
   };
 
   return (
@@ -649,7 +653,7 @@ const DataExtraction = (props) => {
           </div>
           <div class="col-md-3 input-group">
           
-            <select class="custom-select" id="category">
+            <select class="custom-select" id="category" onChange={handleCategoryChange}>
               <option selected>Category</option>
               <option value="Breakfast">Breakfast</option>
               <option value="Fruits">Fruits</option>

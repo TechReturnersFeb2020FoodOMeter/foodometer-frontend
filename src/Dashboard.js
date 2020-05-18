@@ -51,7 +51,7 @@ const Dashboard = (props) => {
     event.preventDefault();
   };
 
-  const handleAdd = (item, expiryDate, reminder) => {
+  const handleAdd = (item, expiryDate, reminder,category) => {
     console.log("user id is:" + props.user.user_id);
     axios
       .post(
@@ -61,6 +61,7 @@ const Dashboard = (props) => {
           date: expiryDate,
           reminder: reminder,
           user: props.user.user_id,
+          category:category,
         }
       )
       .then((response) => {
