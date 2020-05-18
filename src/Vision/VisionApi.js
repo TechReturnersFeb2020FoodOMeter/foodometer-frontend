@@ -6,6 +6,10 @@ import DataExtraction from "./DataExtraction";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 
+
+
+  
+
 class VisionApi extends React.Component {
   constructor(props) {
     super(props);
@@ -13,11 +17,15 @@ class VisionApi extends React.Component {
       files: [],
       key: [],
       fileuploaded:"",
+      open:true,
+      maessage:"",
     };
 
     this.submitToGoogle = this.submitToGoogle.bind(this);
   }
-
+  handleClose(){ 
+   this.open= false
+  }
   getFiles(files) {
     this.setState({ files: files });
     this.submitToGoogle();

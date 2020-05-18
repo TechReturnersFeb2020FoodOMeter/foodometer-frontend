@@ -11,12 +11,18 @@ import {
 } from "@fortawesome/free-regular-svg-icons";
 import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 import moment from "moment";
+import Snackbar from "@material-ui/core/Snackbar";
+import { makeStyles } from "@material-ui/core/styles";
+import { SnackbarContent } from "@material-ui/core";
 
 
 const Dashboard = (props) => {
   const [itemList, setItemList] = useState([]);
   const [sorted, setSorted ] = useState();
-  
+  const [open, setOpen] = useState(false);
+  const [message, setMessage] = useState("");
+  const handleClose = () => setOpen(false);
+
   useEffect(() => {
     axios
       .post(
@@ -43,6 +49,8 @@ const Dashboard = (props) => {
           return product.item_id !== item;
         });
         setItemList(filtered_Product_List);
+        setMessage("Item deleted from dashboard");
+        setOpen(true);
       
       })
       .catch((err) => {
@@ -67,6 +75,8 @@ const Dashboard = (props) => {
       .then((response) => {
         const addedItem = response.data;
         const newItems = [...itemList, addedItem];
+        setMessage("Item added to dashboard");
+        setOpen(true);
         setItemList(newItems);
        
       })
@@ -105,6 +115,22 @@ const Dashboard = (props) => {
     }
     event.preventDefault();
   }
+
+  const useStyles = makeStyles((theme) => ({
+    snackbar: {
+      color: "black",
+      [theme.breakpoints.down("xs")]: {
+        bottom: 90,
+      },
+    },
+    content: {
+      display: "flex",
+      justifyContent: "center",
+      backgroundColor: "black",
+    },
+  }));
+  const classes = useStyles();
+
   return (
     <div id="dashboard">
       <div>
@@ -197,8 +223,9 @@ const Dashboard = (props) => {
                       >
                         <FontAwesomeIcon icon={faTimesCircle} color="#615f5f" />
                       </button>
+                      
                     </p>
-
+                    
                     <p class="card-footer bg-transparent m-0 p-0">
                       <div className="row m-0 p-0">
                         <div className="col-6 pt-2">
@@ -257,6 +284,14 @@ const Dashboard = (props) => {
         <VisionApi handleAdd={handleAdd} />
        
        </div></div></div></div>
+       <Snackbar
+          className={classes.snackbar}
+          open={open}
+          autoHideDuration={1500}
+          onClose={handleClose}
+        >
+          <SnackbarContent className={classes.content} message={message} />
+        </Snackbar>
       </div>
     </div>
   );

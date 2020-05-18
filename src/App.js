@@ -4,12 +4,14 @@ import "./App.css";
 import Home from "./Home";
 import Dashboard from "./Dashboard";
 
+
 const divStyle = {
     width: '100%',
     height:"800px",
     backgroundImage: `url(${"./brooke-lark-08bOYnH_r_E-unsplash.jpg"})`,
     backgroundSize:'cover'
 }
+
 export default class App extends Component {
   constructor() {
     super();
