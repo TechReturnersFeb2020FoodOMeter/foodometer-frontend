@@ -8,5 +8,6 @@ form{
 }
 .addprod{
     margin: 10px;
-    padding-top: 20px;
+    padding-top: 0px;
+    text-align: center;
 }

@@ -585,7 +585,6 @@ const DataExtraction = (props) => {
   // }
 
   const handleSelectedValue = (value) => {
-   
     selectedValue = value;
     if (selectedValue !== "None of the above") {
       document.getElementById("product").value = selectedValue;
@@ -611,18 +610,24 @@ const DataExtraction = (props) => {
   };
 
   const handleAddTask = () => {
-    props.handleAdd(product, date, reminder,category);
+    props.handleAdd(product, date, reminder, category);
   };
 
   return (
     <div className="dataextraction">
       {console.log("props is" + props.arr)}
-      
 
-      <form >
-     {props.file==='true'? <DynamicSelect array={retArr} onSelectChange={handleSelectedValue} /> :null}
-         <div className="row addprod">
-
+      <form>
+        {props.file === "true" ? (
+          <DynamicSelect array={retArr} onSelectChange={handleSelectedValue} />
+        ) : null}
+        <div className="row addprod">
+          <div className="col col-md-4 my-auto">Product</div>
+          <div className="col col-md-3">Expiry Date</div>
+          <div className="col col-md-2">Remind me</div>
+          <div class="col-md-3 input-group">Category</div>
+        </div>
+        <div className="row addprod">
           <div className="col col-md-4 my-auto">
             <input
               type="text"
@@ -652,8 +657,11 @@ const DataExtraction = (props) => {
             />
           </div>
           <div class="col-md-3 input-group">
-          
-            <select class="custom-select" id="category" onChange={handleCategoryChange}>
+            <select
+              class="custom-select"
+              id="category"
+              onChange={handleCategoryChange}
+            >
               <option selected>Category</option>
               <option value="Breakfast">Breakfast</option>
               <option value="Fruits">Fruits</option>
