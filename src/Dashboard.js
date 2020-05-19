@@ -202,6 +202,14 @@ const Dashboard = (props) => {
                             alt="store cupboard"
                           />
                         );
+                        case "Fruits":
+                        return (
+                          <img
+                            src="https://www.waters.com/nextgen/in/en/library/application-notes/2018/chlorate-perchlorate-food-commodities-torus-dea-column-uplc-ms-ms/_jcr_content/root/layoutcontainer_1842990709/image.coreimg.82.620.jpeg/1573244004514/stock-fruits-vegetables-3.jpeg"
+                            class="card-img-top"
+                            alt="store cupboard"
+                          />
+                        );
                       default:
                         return (
                           <img

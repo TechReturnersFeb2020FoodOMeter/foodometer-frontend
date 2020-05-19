@@ -187,7 +187,6 @@ const DataExtraction = (props) => {
     "food",
     "food pyramid",
     "foodstuffs",
-    "fork",
     "freezer",
     "French fries",
     "fried",
@@ -588,6 +587,7 @@ const DataExtraction = (props) => {
     selectedValue = value;
     if (selectedValue !== "None of the above") {
       document.getElementById("product").value = selectedValue;
+      setProduct(selectedValue);
     } else {
       document.getElementById("product").value = "";
       document.getElementById("product").placeholder = "Enter Item Name";
