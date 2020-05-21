@@ -84,6 +84,7 @@ export default class App extends Component {
                 />
               )}
             />
+            <Route component={Home}/>
           </Switch>
         </BrowserRouter>
         </div>
