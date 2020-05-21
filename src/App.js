@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./Home";
 import Dashboard from "./Dashboard";
+import createHistory from 'history/createBrowserHistory';
 
 
 const divStyle = {
@@ -11,7 +12,9 @@ const divStyle = {
     backgroundImage: `url(${"./brooke-lark-08bOYnH_r_E-unsplash.jpg"})`,
     backgroundSize:'cover'
 }
-
+const history = createHistory({
+  basename: process.env.PUBLIC_URL,
+});
 export default class App extends Component {
   constructor() {
     super();
@@ -58,7 +61,7 @@ export default class App extends Component {
        
           <div id="main" className="">
           
-        <BrowserRouter>
+          <BrowserRouter history={history}>
           <Switch>
             <Route
               exact
