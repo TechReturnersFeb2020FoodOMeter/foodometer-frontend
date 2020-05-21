@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "777c834b4e6cff9b6ec105360d584a3c",
+    "revision": "e69a4785c754f7424cd23baf5f77ce75",
     "url": "/foodometer-frontend/index.html"
   },
   {
-    "revision": "805005b4340048a7e72e",
+    "revision": "2f5a5f3ce6ae1ed1b340",
     "url": "/foodometer-frontend/static/css/main.d54c882c.chunk.css"
   },
   {
-    "revision": "372ef8b85cc7f9737d37",
-    "url": "/foodometer-frontend/static/js/2.84649dca.chunk.js"
+    "revision": "5633badbbaf28199ee57",
+    "url": "/foodometer-frontend/static/js/2.de68bed5.chunk.js"
   },
   {
     "revision": "90377550dd86ed303dd30d8f487872de",
-    "url": "/foodometer-frontend/static/js/2.84649dca.chunk.js.LICENSE.txt"
+    "url": "/foodometer-frontend/static/js/2.de68bed5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "805005b4340048a7e72e",
-    "url": "/foodometer-frontend/static/js/main.1c1de6bc.chunk.js"
+    "revision": "2f5a5f3ce6ae1ed1b340",
+    "url": "/foodometer-frontend/static/js/main.38edcc5b.chunk.js"
   },
   {
     "revision": "719c098538c7c675e8c0",
