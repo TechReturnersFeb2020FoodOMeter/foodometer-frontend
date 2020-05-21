@@ -13,7 +13,7 @@ const divStyle = {
     backgroundSize:'cover'
 }
 const history = createHistory({
-  basename: process.env.PUBLIC_URL,
+  basename: "/foodometer-frontend",
 });
 export default class App extends Component {
   constructor() {
