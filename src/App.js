@@ -13,7 +13,7 @@ const divStyle = {
     backgroundSize:'cover'
 }
 const history = createHistory({
-  basename: "/foodometer-frontend",
+  basename: "https://techreturnersfeb2020foodometer.github.io/foodometer-frontend/",
 });
 export default class App extends Component {
   constructor() {
