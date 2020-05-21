@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/foodometer-frontend/static/css/main.d54c882c.chunk.css",
-    "main.js": "/foodometer-frontend/static/js/main.298a5c83.chunk.js",
-    "main.js.map": "/foodometer-frontend/static/js/main.298a5c83.chunk.js.map",
+    "main.js": "/foodometer-frontend/static/js/main.526298fb.chunk.js",
+    "main.js.map": "/foodometer-frontend/static/js/main.526298fb.chunk.js.map",
     "runtime-main.js": "/foodometer-frontend/static/js/runtime-main.ddb5ce44.js",
     "runtime-main.js.map": "/foodometer-frontend/static/js/runtime-main.ddb5ce44.js.map",
     "static/js/2.852a90a4.chunk.js": "/foodometer-frontend/static/js/2.852a90a4.chunk.js",
     "static/js/2.852a90a4.chunk.js.map": "/foodometer-frontend/static/js/2.852a90a4.chunk.js.map",
     "index.html": "/foodometer-frontend/index.html",
-    "precache-manifest.dc4c21e131823c5011810d2663000b5a.js": "/foodometer-frontend/precache-manifest.dc4c21e131823c5011810d2663000b5a.js",
+    "precache-manifest.0b88ab11bd8a2f4b6e4522092018c6da.js": "/foodometer-frontend/precache-manifest.0b88ab11bd8a2f4b6e4522092018c6da.js",
     "service-worker.js": "/foodometer-frontend/service-worker.js",
     "static/css/main.d54c882c.chunk.css.map": "/foodometer-frontend/static/css/main.d54c882c.chunk.css.map",
     "static/js/2.852a90a4.chunk.js.LICENSE.txt": "/foodometer-frontend/static/js/2.852a90a4.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.ddb5ce44.js",
     "static/js/2.852a90a4.chunk.js",
     "static/css/main.d54c882c.chunk.css",
-    "static/js/main.298a5c83.chunk.js"
+    "static/js/main.526298fb.chunk.js"
   ]
 }
