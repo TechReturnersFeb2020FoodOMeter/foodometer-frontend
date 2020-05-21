@@ -2,6 +2,7 @@
   "name": "foodometer-frontend",
   "version": "0.1.0",
   "private": true,
+  "homepage":"https://techreturnersfeb2020foodometer.github.io/foodometer-frontend/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-regular-svg-icons": "^5.13.0",
@@ -20,8 +21,7 @@
     "react-file-base64": "^1.0.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "uuid": "^8.0.0",
-    "homepage":"https://techreturnersfeb2020foodometer.github.io/foodometer-frontend/"
+    "uuid": "^8.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
