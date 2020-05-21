@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/foodometer-frontend/precache-manifest.0b88ab11bd8a2f4b6e4522092018c6da.js"
+  "/foodometer-frontend/precache-manifest.ebb598b1ad41c9f4f1e225a18c873141.js"
 );
 
 self.addEventListener('message', (event) => {
