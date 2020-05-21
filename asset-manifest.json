@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.470eddab.chunk.css",
-    "main.js": "/static/js/main.a3e85fb1.chunk.js",
-    "main.js.map": "/static/js/main.a3e85fb1.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.0794f2f4.js",
-    "runtime-main.js.map": "/static/js/runtime-main.0794f2f4.js.map",
-    "static/js/2.852a90a4.chunk.js": "/static/js/2.852a90a4.chunk.js",
-    "static/js/2.852a90a4.chunk.js.map": "/static/js/2.852a90a4.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.0a44f2aee14a9097a62bc3bd1a946655.js": "/precache-manifest.0a44f2aee14a9097a62bc3bd1a946655.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.470eddab.chunk.css.map": "/static/css/main.470eddab.chunk.css.map",
-    "static/js/2.852a90a4.chunk.js.LICENSE.txt": "/static/js/2.852a90a4.chunk.js.LICENSE.txt",
-    "static/media/Home.css": "/static/media/brooke-lark-08bOYnH_r_E-unsplash.10c4da59.jpg",
-    "static/media/cyan-canvas.jpg": "/static/media/cyan-canvas.10cfec1e.jpg"
+    "main.css": "/foodometer-frontend/static/css/main.d54c882c.chunk.css",
+    "main.js": "/foodometer-frontend/static/js/main.298a5c83.chunk.js",
+    "main.js.map": "/foodometer-frontend/static/js/main.298a5c83.chunk.js.map",
+    "runtime-main.js": "/foodometer-frontend/static/js/runtime-main.ddb5ce44.js",
+    "runtime-main.js.map": "/foodometer-frontend/static/js/runtime-main.ddb5ce44.js.map",
+    "static/js/2.852a90a4.chunk.js": "/foodometer-frontend/static/js/2.852a90a4.chunk.js",
+    "static/js/2.852a90a4.chunk.js.map": "/foodometer-frontend/static/js/2.852a90a4.chunk.js.map",
+    "index.html": "/foodometer-frontend/index.html",
+    "precache-manifest.dc4c21e131823c5011810d2663000b5a.js": "/foodometer-frontend/precache-manifest.dc4c21e131823c5011810d2663000b5a.js",
+    "service-worker.js": "/foodometer-frontend/service-worker.js",
+    "static/css/main.d54c882c.chunk.css.map": "/foodometer-frontend/static/css/main.d54c882c.chunk.css.map",
+    "static/js/2.852a90a4.chunk.js.LICENSE.txt": "/foodometer-frontend/static/js/2.852a90a4.chunk.js.LICENSE.txt",
+    "static/media/Home.css": "/foodometer-frontend/static/media/brooke-lark-08bOYnH_r_E-unsplash.10c4da59.jpg",
+    "static/media/cyan-canvas.jpg": "/foodometer-frontend/static/media/cyan-canvas.10cfec1e.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.0794f2f4.js",
+    "static/js/runtime-main.ddb5ce44.js",
     "static/js/2.852a90a4.chunk.js",
-    "static/css/main.470eddab.chunk.css",
-    "static/js/main.a3e85fb1.chunk.js"
+    "static/css/main.d54c882c.chunk.css",
+    "static/js/main.298a5c83.chunk.js"
   ]
 }
