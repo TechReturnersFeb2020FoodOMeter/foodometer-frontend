@@ -23,6 +23,7 @@ class VisionApi extends React.Component {
 
     this.submitToGoogle = this.submitToGoogle.bind(this);
   }
+
   handleClose(){ 
    this.open= false
   }
@@ -30,6 +31,11 @@ class VisionApi extends React.Component {
     this.setState({ files: files });
     this.submitToGoogle();
   }
+  setFiles()
+  {
+    this.setState({ files: null });
+  }
+ 
   submitToGoogle = async () => {
     try {
       let image = this.state.files[0].base64;
@@ -64,9 +70,19 @@ class VisionApi extends React.Component {
       );
       let responseJson = await response.json();
       console.log(responseJson);
-      let processed = responseJson.responses[0].textAnnotations[0].description.split('\n');
-      console.log(processed);
-      this.setState({ key: processed,fileuploaded:'true'} )
+      let results = [];
+      let labels, label2, processed;
+      if(responseJson.responses[0].labelAnnotations){
+       labels = responseJson.responses[0].labelAnnotations[0].description;
+       label2 = responseJson.responses[0].labelAnnotations[1].description;
+      }
+      if(responseJson.responses[0].textAnnotations){
+       processed = responseJson.responses[0].textAnnotations[0].description.split('\n');
+      }
+      results.push(label2);
+      results.push(labels);
+      results.push(processed);
+      this.setState({ key: results,fileuploaded:'true'} )
     } catch (error) {
       console.log(error);
     }
@@ -74,7 +90,7 @@ class VisionApi extends React.Component {
 
   render() {
     return (
-      
+          
           <div className="text-center my-4 pl-4">
             <div className="justify-contents-center">Upload Image
             <FileBase64 multiple={true} onDone={this.getFiles.bind(this)} /></div>
@@ -84,7 +100,7 @@ class VisionApi extends React.Component {
               this.state.files.map((file, i) => {
                 // eslint-disable-next-line jsx-a11y/alt-text
                 return (
-                  <img key={i} src={file.base64} width="150px" height="150px" className="my-2" style={{ border: "1px solid #3a3a3a"}} />
+                  <img key={i} src={file.base64} width="150px" height="150px" className="my-2" style={{ border: "1px solid #3a3a3a"}} id="img" />
                 );
               })
               // eslint-disable-next-line react/jsx-no-comment-textnodes
@@ -100,7 +116,8 @@ class VisionApi extends React.Component {
             <DataExtraction 
             arr={this.state.key} 
             file={this.state.fileuploaded}
-            handleAdd={this.props.handleAdd}/>
+            handleAdd={this.props.handleAdd}
+           />
           </div>
           
           </div>

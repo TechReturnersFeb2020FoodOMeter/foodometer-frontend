@@ -84,6 +84,7 @@ const Dashboard = (props) => {
       .catch((err) => {
         console.log("Error adding the item", err);
       });
+      
   };
 
   const getSortOrder = (prop, desc) => {    

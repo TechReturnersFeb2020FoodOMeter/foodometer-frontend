@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./VisionApi.css";
 import DynamicSelect from "./DynamicSelect";
 
@@ -131,8 +131,6 @@ const DataExtraction = (props) => {
     "crunch",
     "crust",
     "cucumber",
-    "cuisine",
-    "cupboard",
     "cupcake",
     "curds",
     "currants",
@@ -184,7 +182,6 @@ const DataExtraction = (props) => {
     "flan",
     "flax",
     "flour",
-    "food",
     "food pyramid",
     "foodstuffs",
     "freezer",
@@ -554,6 +551,9 @@ const DataExtraction = (props) => {
   let selectedValue;
   console.log("props received" + props.arr);
   let retArr = [];
+
+
+
   retArr = foodlist.filter((b) =>
     textArr.some((a) => new RegExp(b, "i").test(a))
   );
@@ -610,6 +610,10 @@ const DataExtraction = (props) => {
   };
 
   const handleAddTask = () => {
+    document.getElementById('product').value="";
+    document.getElementById('date').value="";
+    document.getElementById('reminder').value="";
+    document.getElementById('category').value="";
     props.handleAdd(product, date, reminder, category);
   };
 
@@ -645,6 +649,7 @@ const DataExtraction = (props) => {
               placeholder="Last name"
               onChange={handleDateChange}
               value={date}
+              id="date"
             />
           </div>
           <div className="col col-md-2">
@@ -654,6 +659,7 @@ const DataExtraction = (props) => {
               placeholder="Reminder"
               onChange={handleReminderChange}
               value={reminder}
+              id="reminder"
             />
           </div>
           <div class="col-md-3 input-group">
